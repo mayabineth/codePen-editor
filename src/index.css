@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+}
+.top-pane {
+  background-color: hsl(225, 6%, 25%);
+}
+.pane {
+  height: 50vh;
+  display: flex;
+}
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: hsl(225, 6%, 25%);
+}
+.editor-container.collapsed {
+  flex-grow: 0;
+}
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+.icon-btn {
+  color: #e7e7eb;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.expand-collapse-btn {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.header {
+  background-color: hsl(225, 6%, 13%);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+  padding: 0 2rem 0 1rem;
+}
+.left-side-header {
+  display: flex;
+  flex-direction: row;
+}
+.right-side-header {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.header-btn {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-flex-details {
+  display: flex;
+  flex-direction: column;
+  color: #e7e7eb;
+}
+.header-flex-details .head {
+  font-weight: bold;
+}
+.head span {
+  font-size: 0.8rem;
+  margin-left: 0.1rem;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.btn span {
+  font-size: 1.1rem;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  margin-right: 0.2rem;
+}
+.header-flex-details .name {
+  font-size: 0.7rem;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #e7e7eb;
+  background-color: hsl(225, 6%, 25%);
+  letter-spacing: o.1rem;
+  transition: all 0.3s ease-out;
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225, 6%, 13%);
+  color: #e7e7eb;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+.CodeMirror {
+  height: 100% !important;
+}
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  overflow: hidden;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 768px) {
+  .code-mirror-wrapper {
+    font-size: 0.9rem;
+  }
+}
